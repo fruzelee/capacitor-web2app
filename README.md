@@ -1,4 +1,4 @@
-# Convert Website into Android App using Capacitor 😱
+# Convert Website into Android App using Capacitor!
 
 This repository provides a comprehensive guide and resources for converting a website or web application into a fully functional Android app using Capacitor, a powerful cross-platform development tool. With Capacitor, you can seamlessly integrate web technologies into native mobile applications.
 

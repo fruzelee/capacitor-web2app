@@ -50,7 +50,7 @@ npm install -g cordova-res
 ```
 Organize your icon and splash screen files within a `resources/` folder in your project's root directory. Run the command `cordova-res android --skip-config --copy` to generate different-sized icons and splash screens for your app.
 
-For a more detailed explanation and visual examples, please refer to the [article](https://blog.webdrip.in/convert-website-into-android-app-using-capacitor) associated with this repository.
+For a more detailed explanation and visual examples, please refer to the [Capacitor Docs](https://capacitorjs.com/docs) associated with this repository.
 
 ## Reference
 For more information and detailed steps on converting your website into an Android app using Capacitor, please visit the [Capacitor Docs](https://capacitorjs.com/docs) that inspired this repository.

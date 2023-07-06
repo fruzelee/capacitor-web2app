@@ -1,71 +1,56 @@
-# Getting Started with Create React App
+# Convert Website into Android App using Capacitor 😱
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository provides a comprehensive guide and resources for converting a website or web application into a fully functional Android app using Capacitor, a powerful cross-platform development tool. With Capacitor, you can seamlessly integrate web technologies into native mobile applications.
 
-## Available Scripts
+## Table of Contents
+- [Prerequisite](#prerequisite)
+- [Step 1: Create a React Application](#step-1-create-a-react-application)
+- [Step 2: Create a Build Folder for Your Application](#step-2-create-a-build-folder-for-your-application)
+- [Step 3: Install Capacitor](#step-3-install-capacitor)
+- [Step 4: Create Your Android Application](#step-4-create-your-android-application)
+- [Bonus Section: Create a Custom Splash Screen](#bonus-section-create-a-custom-splash-screen)
+- [Reference](#reference)
 
-In the project directory, you can run:
+## Prerequisite
+Before getting started, ensure that you have a production build folder of your website or web application. Most frameworks have a build command that generates this folder for you. If you're using vanilla JavaScript, make sure to organize all your assets and files within a dedicated folder.
 
-### `npm start`
+You will also need Android Studio installed on your machine.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Step 1: Create a React Application
+If you don't have an existing project, you can create a new React application using the following commands:
+```
+npx create-react-app my-app
+cd my-app
+```
+To run the React application, use the command `npm start`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Step 2: Create a Build Folder for Your Application
+To convert your React application into an Android app, you need to create a build folder. Use the command `npm run build` to generate this folder.
 
-### `npm test`
+## Step 3: Install Capacitor
+Install the Capacitor CLI and core library by running the following command:
+```
+npm install @capacitor/cli @capacitor/core
+npx cap init
+```
+During the initialization process, you will be prompted to enter the name of your application and the package ID (e.g., com.yourAppName.android). Afterward, open the `capacitor.config.ts` file located in the `webDir` folder and update the name of your build folder if it's different.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Step 4: Create Your Android Application
+To create the Android application, install and configure the Capacitor Android library with the following commands:
+```
+npm install @capacitor/android
+npx cap add android
+```
+You can then open Android Studio either by running `npx cap open android` or by manually importing the `android/` directory as an Android Studio project. Once the project is ready, you can run the Android application either on an emulator or a physical Android device.
 
-### `npm run build`
+## Bonus Section: Create a Custom Splash Screen
+To add a custom splash screen and icon to your Android application, install the Capacitor plugin using the following command:
+```
+npm install -g cordova-res
+```
+Organize your icon and splash screen files within a `resources/` folder in your project's root directory. Run the command `cordova-res android --skip-config --copy` to generate different-sized icons and splash screens for your app.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+For a more detailed explanation and visual examples, please refer to the [article](https://blog.webdrip.in/convert-website-into-android-app-using-capacitor) associated with this repository.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# capacitor-web2app
+## Reference
+For more information and detailed steps on converting your website into an Android app using Capacitor, please visit the [Capacitor Docs](https://capacitorjs.com/docs) that inspired this repository.

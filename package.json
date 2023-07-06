@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@capacitor/android": "^5.1.1",
     "@capacitor/cli": "^5.1.1",
     "@capacitor/core": "^5.1.1",
     "@testing-library/jest-dom": "^5.16.5",
